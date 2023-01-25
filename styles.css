@@ -1,12 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --key-width: 60px;
+  --key-height: calc(var(--key-width) * 3);
+  --sharp-width: calc(var(--key-width) / 2);
+  --sharp-height: calc(var(--sharp-width) * 3);
+  --sharp-margin: calc(var(--sharp-width) / -2);
+}
+
 body {
   text-align: center;
   background-color: #283149;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
   font-size: 5rem;
   color: #dbedf3;
-  font-family: "Arvo", cursive;
   text-shadow: 3px 0 #da0463;
 }
 
@@ -20,52 +30,37 @@ h1 {
 }
 
 .key {
-  width: 40px;
-  height: 120px;
+  width: var(--key-width);
+  height: var(--key-height);
   background-color: white;
   border: 1px solid black;
-
   position: relative;
   z-index: 1;
 }
 
 .sharp {
-  width: 20px;
-  height: 70px;
+  width: var(--sharp-width);
+  height: var(--sharp-height);
   background-color: black;
-  margin-left: -20px;
-  top: 0px;
-  z-index: 3;
+  margin: 0 var(--sharp-margin);
+  z-index: 2;
 }
 
-.key span {
+.key span,
+.sharp span {
   position: absolute;
-  bottom: 10px;
-  left: 5px;
-  font-size: 16px;
+  bottom: 3px;
+  left: 6px;
+  font-size: 23px;
   font-weight: bold;
 }
 
 .sharp span {
   color: white;
+  left: 3px;
+  font-size: 20px;
 }
 
-/*
-
-.white span {
-  position: absolute;
-  bottom: 10px;
-  font-weight: bold;
-  left: 10px;
-  font-size: 16px;
+.key:hover {
+  cursor: pointer;
 }
-
-.sharp span {
-  position: absolute;
-  color: white;
-  bottom: 10px;
-  left: 5px;
-  font-size: 14px;
-  font-weight: bold;
-}
-*/
