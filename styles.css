@@ -1,0 +1,71 @@
+body {
+  text-align: center;
+  background-color: #283149;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #dbedf3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #da0463;
+}
+
+.pressed {
+  opacity: 0.5;
+}
+
+.keys {
+  display: flex;
+  padding: 4%;
+}
+
+.key {
+  width: 40px;
+  height: 120px;
+  background-color: white;
+  border: 1px solid black;
+
+  position: relative;
+  z-index: 1;
+}
+
+.sharp {
+  width: 20px;
+  height: 70px;
+  background-color: black;
+  margin-left: -20px;
+  top: 0px;
+  z-index: 3;
+}
+
+.key span {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sharp span {
+  color: white;
+}
+
+/*
+
+.white span {
+  position: absolute;
+  bottom: 10px;
+  font-weight: bold;
+  left: 10px;
+  font-size: 16px;
+}
+
+.sharp span {
+  position: absolute;
+  color: white;
+  bottom: 10px;
+  left: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+*/
